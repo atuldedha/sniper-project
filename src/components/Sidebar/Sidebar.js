@@ -14,12 +14,12 @@ const Sidebar = ({ selected, setSelected }) => {
     <div className="flex flex-col w-[244px] ml-10 mt-10">
       <div className="flex flex-col items-center">
         <div className="h-[120px] w-[120px] rounded-full bg-green-400 mb-[32px] flex items-center justify-center">
-          <span className="text-6xl text-white">A</span>
+          <span className="text-6xl text-white font-lato font-bold">A</span>
         </div>
-        <span className="font-bold text-[20px] text-black leading-[1.4]">
+        <span className="font-bold text-[20px] text-black leading-[1.4] font-lato">
           Atul Choudhary
         </span>
-        <span className="font-normal text-[12px] text-[#3b4c66]">
+        <span className="font-normal text-[12px] text-[#3b4c66] font-lato">
           atul@gmail.com
         </span>
       </div>

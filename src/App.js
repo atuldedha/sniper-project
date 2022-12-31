@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalendarIcon } from "@heroicons/react/24/solid";
+import AppointmentCard from "./components/AppointmentCard/AppointmentCard";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
@@ -7,6 +7,8 @@ function App() {
   return (
     <div className="flex space-x-4 px-[20px] py-[40px]">
       <Sidebar selected={selected} setSelected={setSelected} />
+
+      {selected === 1 && <AppointmentCard name="Atul" />}
     </div>
   );
 }

@@ -16,7 +16,7 @@ const SidebarOptions = ({ selected, handleSelection, index, Icon, title }) => {
       <span
         className={`${
           selected ? "font-semibold" : "font-normal"
-        } text-[14px] text-[#333] leading-[1.7]`}
+        } text-[14px] text-[#333] leading-[1.7] font-lato`}
       >
         {title}
       </span>
