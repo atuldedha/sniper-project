@@ -1,14 +1,24 @@
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
-const AppointmentSection = ({ appointments }) => {
+const AppointmentSection = ({
+  appointments,
+  setDataToShow,
+  setShowDetails,
+}) => {
   return (
     <div className="flex flex-col">
       <span className="text-[#3b4c66] text-[16px] mb-[16px] font-normal">
         March 2023
       </span>
       {appointments?.map((appointment) => (
-        <div className="pr-[24px] border border-[#d9e1ee] rounded-[4px] w-full flex items-center cursor-pointer hover:shadow-md transition-all duration-200 ease-in-out">
+        <div
+          className="pr-[24px] border border-[#d9e1ee] rounded-[4px] w-full flex items-center cursor-pointer hover:shadow-md transition-all duration-200 ease-in-out"
+          onClick={() => {
+            setShowDetails(true);
+            setDataToShow(appointment);
+          }}
+        >
           <div className="py-[10px] flex flex-col items-center w-[160px] border-r-[1px] border-r-[#d9e1ee]">
             <span className="uppercase text-[12px] leading-[20px] text-[#3b4c66] font-lato">
               {appointment.month}
