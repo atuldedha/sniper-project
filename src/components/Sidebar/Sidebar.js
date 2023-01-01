@@ -12,7 +12,7 @@ const Sidebar = ({ selected, setSelected }) => {
     setSelected(index);
   };
   return (
-    <div className="flex flex-col w-[244px] ml-10 mt-10">
+    <div className="hidden md:flex flex-col w-[244px] ml-10 mt-10">
       <div className="flex flex-col items-center">
         <div className="h-[120px] w-[120px] rounded-full bg-[#bf360d] mb-[32px] flex items-center justify-center">
           <span className="text-6xl text-white font-lato font-bold">
@@ -26,7 +26,7 @@ const Sidebar = ({ selected, setSelected }) => {
           {personalData.email}
         </span>
       </div>
-      <div className="flex flex-col mt-[30px] space-y-4">
+      <div className="flex flex-col mt-[30px] space-y-2">
         <SidebarOptions
           Icon={CalendarIcon}
           selected={selected === 1}

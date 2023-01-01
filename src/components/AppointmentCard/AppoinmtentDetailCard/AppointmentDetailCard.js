@@ -4,13 +4,13 @@ import { personalData } from "../staticData";
 
 const AppointmentDetailCard = ({ data, hideDetail }) => {
   return (
-    <div className="flex flex-col">
-      <div className="flex items-center space-x-5 mb-[38px]">
+    <div className="flex flex-col  p-[16px]">
+      <div className="flex items-center space-x-5 mb-[38px] lg:p-0">
         <ChevronLeftIcon
           className="h-[20px] w-[20px] text-[#181818] hover:cursor-pointer"
           onClick={hideDetail}
         />
-        <span className="text-[20px] text-[#181818] font-bold font-lato leading-[1.4] uppercase">{`${data.date} ${data.month} ${data.year}, ${data.time}`}</span>
+        <span className="text-[16px] lg:text-[20px] text-[#181818] font-bold font-lato leading-[1.4] uppercase">{`${data.date} ${data.month} ${data.year}, ${data.time}`}</span>
       </div>
 
       <div className="pr-[24px] border border-[#d9e1ee] rounded-[4px] w-full flex items-center cursor-pointer hover:shadow-md transition-all duration-200 ease-in-out mb-[32px]">
@@ -50,31 +50,31 @@ const AppointmentDetailCard = ({ data, hideDetail }) => {
         <span className="w-[160px] text-[#8495b1] leading-[1.5] font-lato font-normal">
           Your Time
         </span>
-        <span className="text-[16px] text-[#181818] font-normal font-lato leading-[1.4] uppercase">{`${data.date} ${data.month} ${data.year}, ${data.time}`}</span>
+        <span className="text-[14px] lg:text-[16px] text-[#181818] font-normal font-lato leading-[1.4] uppercase">{`${data.date} ${data.month} ${data.year}, ${data.time}`}</span>
       </div>
       <div className="flex mb-[20px]">
         <span className="w-[160px] text-[#8495b1] leading-[1.5] font-lato font-normal">
-          Your Time
+          Your Details
         </span>
         <div className="flex flex-col">
-          <span className="text-[16px] font-lato font-normal text-[#181818] leading-[1.5]">
+          <span className="text-[14px] lg:text-[16px] font-lato font-normal text-[#181818] leading-[1.5]">
             {personalData.name}
           </span>
-          <span className="text-[16px] font-lato font-normal text-[#181818] leading-[1.5]">
+          <span className="text-[14px] lg:text-[16px] font-lato font-normal text-[#181818] leading-[1.5]">
             {personalData.email}
           </span>
-          <span className="text-[16px] font-lato font-normal text-[#181818] leading-[1.5]">
+          <span className="text-[14px] lg:text-[16px] font-lato font-normal text-[#181818] leading-[1.5]">
             +91 {personalData.phone}
           </span>
         </div>
       </div>
 
-      <div className="flex items-center justify-end w-full space-x-4">
+      <div className="flex flex-col lg:flex-row items-center lg:justify-end w-full space-x-0 space-y-4 lg:space-x-4 lg:space-y-0 mt-4 lg:mt-0">
         <button className="border-none outline-none text-red-500 font-lato text-[16px] leading-[1.5] ">
           Cancel Appointment
         </button>
 
-        <button className="px-[30px] py-[5px] text-center border border-[#d9e1ee] font-normal text-[#3b4c66] text-[16px] rounded-[4px] transition-all duration-200 ease-in-out hover:border-blue-400">
+        <button className="px-[30px] py-[5px] w-full lg:w-max text-center border border-[#d9e1ee] font-normal text-[#3b4c66] text-[16px] rounded-[4px] transition-all duration-200 ease-in-out hover:border-blue-400">
           Reschedule
         </button>
       </div>

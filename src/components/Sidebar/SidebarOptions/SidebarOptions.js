@@ -5,7 +5,7 @@ const SidebarOptions = ({ selected, handleSelection, index, Icon, title }) => {
     <div
       className={`${
         selected ? "bg-blue-100" : "hover:bg-gray-100"
-      } flex items-center space-x-4 rounded-md p-3 hover:cursor-pointer`}
+      } flex items-center space-x-4 rounded-md p-3 hover:cursor-pointer transition-all duration-150 ease-in-out`}
       onClick={() => handleSelection(index)}
     >
       <Icon
